@@ -11,7 +11,13 @@ import UIKit
 class CATextLayerController: UIViewController {
 
     @IBOutlet weak var someView: UIView!
+    var textLayer = CATextLayer.init()
     override func viewDidLoad() {
+        
+    }
+    
+    func setupTextLayer(){
+        textLayer.frame = someView.bounds
         
     }
 
