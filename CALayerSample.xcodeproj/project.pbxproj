@@ -19,7 +19,10 @@
 		35135D841D353C4B002AFA27 /* cresentEarthRisesAboveLunarHorizon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 35135D831D353C4B002AFA27 /* cresentEarthRisesAboveLunarHorizon.jpg */; };
 		35135DAC1D354B72002AFA27 /* ScrollLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35135DAB1D354B72002AFA27 /* ScrollLayerController.swift */; };
 		35135DAE1D354FC4002AFA27 /* ScrollingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35135DAD1D354FC4002AFA27 /* ScrollingView.swift */; };
+		3560D8C51D41098F00BA2AEE /* CATiledLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3560D8C41D41098F00BA2AEE /* CATiledLayerViewController.swift */; };
+		3560D8C71D4109FB00BA2AEE /* CATiledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3560D8C61D4109FB00BA2AEE /* CATiledView.swift */; };
 		35A9553F1D3E6EAB00ECC686 /* CATextLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A9553E1D3E6EAB00ECC686 /* CATextLayerController.swift */; };
+		35A955431D3E803400ECC686 /* CAReplicatorLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A955421D3E803400ECC686 /* CAReplicatorLayerViewController.swift */; };
 		35FA92041D360FFB00C073E6 /* CAShapeLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA92031D360FFB00C073E6 /* CAShapeLayerController.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +62,10 @@
 		35135D831D353C4B002AFA27 /* cresentEarthRisesAboveLunarHorizon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cresentEarthRisesAboveLunarHorizon.jpg; sourceTree = "<group>"; };
 		35135DAB1D354B72002AFA27 /* ScrollLayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollLayerController.swift; sourceTree = "<group>"; };
 		35135DAD1D354FC4002AFA27 /* ScrollingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollingView.swift; sourceTree = "<group>"; };
+		3560D8C41D41098F00BA2AEE /* CATiledLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATiledLayerViewController.swift; sourceTree = "<group>"; };
+		3560D8C61D4109FB00BA2AEE /* CATiledView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATiledView.swift; sourceTree = "<group>"; };
 		35A9553E1D3E6EAB00ECC686 /* CATextLayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATextLayerController.swift; sourceTree = "<group>"; };
+		35A955421D3E803400ECC686 /* CAReplicatorLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAReplicatorLayerViewController.swift; sourceTree = "<group>"; };
 		35FA92031D360FFB00C073E6 /* CAShapeLayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAShapeLayerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +130,9 @@
 				35135DAD1D354FC4002AFA27 /* ScrollingView.swift */,
 				35FA92031D360FFB00C073E6 /* CAShapeLayerController.swift */,
 				35A9553E1D3E6EAB00ECC686 /* CATextLayerController.swift */,
+				35A955421D3E803400ECC686 /* CAReplicatorLayerViewController.swift */,
+				3560D8C41D41098F00BA2AEE /* CATiledLayerViewController.swift */,
+				3560D8C61D4109FB00BA2AEE /* CATiledView.swift */,
 			);
 			path = CALayerSample;
 			sourceTree = "<group>";
@@ -280,11 +289,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				35A9553F1D3E6EAB00ECC686 /* CATextLayerController.swift in Sources */,
+				3560D8C71D4109FB00BA2AEE /* CATiledView.swift in Sources */,
 				35135D121D33F4CA002AFA27 /* CALayerSample.xcdatamodeld in Sources */,
 				35135D0C1D33F4CA002AFA27 /* ViewController.swift in Sources */,
 				35135DAE1D354FC4002AFA27 /* ScrollingView.swift in Sources */,
 				35135DAC1D354B72002AFA27 /* ScrollLayerController.swift in Sources */,
+				35A955431D3E803400ECC686 /* CAReplicatorLayerViewController.swift in Sources */,
 				35135D0A1D33F4CA002AFA27 /* AppDelegate.swift in Sources */,
+				3560D8C51D41098F00BA2AEE /* CATiledLayerViewController.swift in Sources */,
 				35FA92041D360FFB00C073E6 /* CAShapeLayerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

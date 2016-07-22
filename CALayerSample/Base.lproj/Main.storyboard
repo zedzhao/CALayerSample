@@ -69,13 +69,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="xEp-QG-HXf">
-                                <rect key="frame" x="175" y="175" width="250" height="290"/>
+                                <rect key="frame" x="175" y="175" width="250" height="344"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="star.png" translatesAutoresizingMaskIntoConstraints="NO" id="b9c-MU-3T3">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="94"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vo8-sr-u2I" customClass="ScrollingView" customModule="CALayerSample" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="40" width="250" height="250"/>
+                                        <rect key="frame" x="0.0" y="94" width="250" height="250"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cresentEarthRisesAboveLunarHorizon" translatesAutoresizingMaskIntoConstraints="NO" id="CTv-9h-GIp">
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
@@ -148,10 +148,44 @@
             </objects>
             <point key="canvasLocation" x="226" y="1798"/>
         </scene>
+        <!--Tiled Layer View Controller-->
+        <scene sceneID="Gx1-lh-7It">
+            <objects>
+                <viewController id="oBQ-aO-3JP" customClass="CATiledLayerViewController" customModule="CALayerSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LMR-fZ-d6b"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Bg-X4-kgz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2eX-cA-iXt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TiC-hQ-jLn" customClass="CATiledView" customModule="CALayerSample" customModuleProvider="target">
+                                <rect key="frame" x="217" y="236" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="6Ix-6f-kCh"/>
+                                    <constraint firstAttribute="width" constant="240" id="gSe-Ws-mBQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TiC-hQ-jLn" firstAttribute="centerY" secondItem="2eX-cA-iXt" secondAttribute="centerY" id="Wre-Ng-XDD"/>
+                            <constraint firstItem="TiC-hQ-jLn" firstAttribute="centerX" secondItem="2eX-cA-iXt" secondAttribute="centerX" id="Yts-16-zcB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="catiledView" destination="TiC-hQ-jLn" id="nJO-V4-auL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u0Z-gl-Wpg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12" y="3002"/>
+        </scene>
         <!--Text Layer Controller-->
         <scene sceneID="rmB-Is-klb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bzb-QY-Nyu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Bpb-Dg-HnA" customClass="CATextLayerController" customModule="CALayerSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KBy-Uk-qFo"/>
@@ -169,10 +203,18 @@
                                     <constraint firstAttribute="width" constant="240" id="9Sr-h5-xWC"/>
                                 </constraints>
                             </view>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.5" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="hgg-KX-fke">
+                                <rect key="frame" x="220" y="423" width="118" height="31"/>
+                                <connections>
+                                    <action selector="fontsizeSliderChanged:" destination="Bpb-Dg-HnA" eventType="valueChanged" id="Hdx-fl-E7B"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="CLX-pn-w3r" firstAttribute="centerX" secondItem="sqU-OF-tDG" secondAttribute="centerX" id="2TU-pq-0sF"/>
+                            <constraint firstItem="hgg-KX-fke" firstAttribute="centerX" secondItem="sqU-OF-tDG" secondAttribute="centerX" id="Q1R-qT-cDp"/>
+                            <constraint firstItem="hgg-KX-fke" firstAttribute="top" secondItem="CLX-pn-w3r" secondAttribute="bottom" constant="10" id="SfO-Uu-cAp"/>
                             <constraint firstItem="CLX-pn-w3r" firstAttribute="centerY" secondItem="sqU-OF-tDG" secondAttribute="centerY" id="mmp-Id-wJ1"/>
                         </constraints>
                     </view>
@@ -180,6 +222,7 @@
                         <outlet property="someView" destination="CLX-pn-w3r" id="iJ4-BA-GIM"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bzb-QY-Nyu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1390" y="2202"/>
         </scene>
@@ -302,15 +345,15 @@
                                             <segue destination="Bpb-Dg-HnA" kind="show" id="4XD-jD-fNC"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="E7e-P3-gRP" detailTextLabel="aKL-HT-cyR" style="IBUITableViewCellStyleSubtitle" id="l1A-rO-5Hs">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="E7e-P3-gRP" detailTextLabel="aKL-HT-cyR" style="IBUITableViewCellStyleSubtitle" id="l1A-rO-5Hs" userLabel="CAReplicateLayer">
                                         <rect key="frame" x="0.0" y="240" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l1A-rO-5Hs" id="CPk-Yt-C81">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="CAShapeLayer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="E7e-P3-gRP">
-                                                    <rect key="frame" x="15" y="6" width="107" height="19.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="CAReplicatorLayer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="E7e-P3-gRP">
+                                                    <rect key="frame" x="15" y="6" width="134" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -325,16 +368,19 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="if3-7w-xcy" kind="show" id="fav-e4-yn4"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="kHC-z2-ZAI" detailTextLabel="2Ac-5o-Azv" style="IBUITableViewCellStyleSubtitle" id="fld-Nh-3nT">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="kHC-z2-ZAI" detailTextLabel="2Ac-5o-Azv" style="IBUITableViewCellStyleSubtitle" id="fld-Nh-3nT" userLabel="CATiledLayer">
                                         <rect key="frame" x="0.0" y="284" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fld-Nh-3nT" id="lfK-87-Fa9">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="CAShapeLayer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kHC-z2-ZAI">
-                                                    <rect key="frame" x="15" y="6" width="107" height="19.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="CATiledLayer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kHC-z2-ZAI">
+                                                    <rect key="frame" x="15" y="6" width="95.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -349,6 +395,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="oBQ-aO-3JP" kind="show" id="jmk-3d-VVZ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -365,6 +414,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zRn-fr-4sK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-696" y="1047"/>
+        </scene>
+        <!--Replicator Layer View Controller-->
+        <scene sceneID="Jf2-yW-j1f">
+            <objects>
+                <viewController id="if3-7w-xcy" customClass="CAReplicatorLayerViewController" customModule="CALayerSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Sc-DI-aDF"/>
+                        <viewControllerLayoutGuide type="bottom" id="G94-YI-8nQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZHe-hg-FdQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eru-N5-cAH">
+                                <rect key="frame" x="323" y="219" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="GaA-FH-FAA"/>
+                                    <constraint firstAttribute="width" constant="240" id="Rp9-9m-Ui0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Eru-N5-cAH" firstAttribute="centerY" secondItem="ZHe-hg-FdQ" secondAttribute="centerY" id="PwC-wu-ZSk"/>
+                            <constraint firstItem="Eru-N5-cAH" firstAttribute="centerX" secondItem="ZHe-hg-FdQ" secondAttribute="centerX" id="VHm-Lg-bmL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="someView" destination="Eru-N5-cAH" id="HUz-or-M0n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pjY-N8-X9I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-695" y="1628"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E7j-YM-WnQ">
